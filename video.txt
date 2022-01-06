@@ -1,0 +1,13 @@
+TODO: Place a link to the recording of your project in this file. See spec for additional details
+
+Topic: Christopher Ku's Zoom Meeting
+Start Time: Dec 12, 2021 12:03 PM
+
+Meeting Recording:
+https://washington.zoom.us/rec/share/X90jFPeqEQeYY-QMVnX5aSOPA9W-qEbkLar22qaPFhCvH5tOzZ2Vw1BmlO4gZ9Mi.nwHfXVCDPoIVPJAq
+
+Note:
+Currently, our database only includes the hotels in the city of Seattle or New
+York,
+please just search "Seattle" or "New York" in the field of "GOING TO" for
+testing purpose.

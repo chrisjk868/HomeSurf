@@ -1,0 +1,314 @@
+/*
+  Names: Yanjie Niu, Christopher Ku
+  Date: Dec. 11th, 2021
+  Section: CSE 154 AA, SAITAWDEKAR,SONIA
+  This is the styles.css page for our hotel reservation website.
+  It is used by the index.html page to give the site a consistent look and feel.
+*/
+
+body {
+  background-color: skyblue;
+  font-family: 'Nunito', sans-serif;
+}
+
+.top-header,
+#search-filter,
+#filter-items,
+.container > header,
+.item,
+footer ul,
+#map-container,
+#submit-btns {
+  display: flex;
+}
+
+.top-header, .item, footer ul, #map-container {
+  align-items: center;
+}
+
+.top-header, .submit-btn {
+  height: 60px;
+  background: rosybrown;
+}
+
+.top-header, .container > header p {
+  margin: auto;
+}
+
+#login-corner-btn, #logout-corner-btn, .item > div:first-of-type, #reserve-btn {
+  margin-right: 10px;
+}
+
+.top-nav p, .top-nav a, #sort-label {
+  margin-left: 30px;
+}
+
+.top-nav, #register-form #login-form-btn #register-btn {
+  cursor: pointer;
+}
+
+.top-nav p, .top-nav a, .item-name {
+  text-decoration: none;
+}
+
+.form-group, .inline-nav {
+  display: inline;
+}
+
+.form-control,
+.submit-btn,
+#login-form input,
+#register-form input,
+.item:last-child {
+  border: none;
+}
+
+.form-label, #login-error, #register-result {
+  color: whitesmoke;
+}
+
+.form-label, #view-title, #view-title-map, #filter-title, #view-title-prev {
+  font-weight: 1000;
+}
+
+.submit-btn, .form-label {
+  text-transform: uppercase;
+}
+
+#people, #sort, .submit-btn {
+  margin-left: 20px;
+}
+
+.submit-btn, #login-form input, #register-form input {
+  width: 100%;
+}
+
+#filter-section, #hotel-detail-page {
+  margin-left: 50px;
+}
+
+#search-filter {
+  margin-left: 20px;
+}
+
+#view-title, #view-title-map, #filter-title, #view-title-prev, .title {
+  color: white;
+  font-size: 15px;
+}
+
+#welcome {
+  margin-right: 20px;
+}
+
+.top-nav {
+  flex: 2;
+}
+
+.top-nav p, .top-nav a {
+  color: #F9F9F9;
+  text-align: justify;
+}
+
+#register-form, #login-form {
+  margin: 0px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-control {
+  background-color: #fce1a7;
+  border-radius: 40px;
+  margin-top: 20px;
+  height: 30px;
+  width: 175px;
+  padding: 0px 25px;
+  color: grey;
+  box-shadow: 0px 0px 0px 2px transparent;
+}
+
+.form-label {
+  left: 0px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 15px;
+}
+
+.submit-btn {
+  font-weight: 700;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+
+#search-filter, #filter-items, #submit-btns {
+  flex-direction: row;
+}
+
+#view-title-prev {
+  font-size: 20px;
+}
+
+#view-section, .container > header, #register-form input {
+  margin-bottom: 10px;
+}
+
+#whole-item-view, #whole-reserved-item-view {
+  margin-top: 50px;
+}
+
+#map-container, #map {
+  margin: 0%;
+  padding: 0%;
+}
+
+#register-form p, .grid-item, .price-tag, footer p {
+  text-align: center;
+}
+
+#search-container {
+  display: flex;
+}
+
+#search-form {
+  align-self: center;
+}
+
+ul, #item-list, #items-list, #hotel-detail-page {
+  list-style: none;
+}
+
+.container {
+  margin: 30px;
+}
+
+.container > header {
+  height: 50px;
+  margin-top: 100px;
+}
+
+.container > header p {
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+#login-form, #submit-btns {
+  width: 300px;
+}
+
+#login-form {
+  padding: 50px;
+}
+
+#login-form label,
+#login-form input,
+#register-form input,
+#register-form label {
+  display: block;
+}
+
+#login-form input {
+  margin-bottom: 20px;
+}
+
+#submit-btns, footer ul li {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#submit-btns {
+  width: 320px;
+}
+
+#login-btn {
+  margin-left: 82px;
+}
+
+#login-error, #register-result {
+  padding-top: 10px;
+}
+
+#register-form {
+  padding: 40px;
+  width: 650px;
+}
+
+#register-form input,
+.grid-container,
+#item-list,
+#items-list,
+#hotel-detail-page,
+.item,
+#login-form input,
+#login-btn,
+#register-form-btn {
+  padding: 10px;
+}
+
+#register-form #login-form-btn #register-btn {
+  float: left;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  position: center;
+}
+
+.item {
+  border-bottom: 1px solid whitesmoke;
+  margin: 10px;
+}
+
+.item:hover {
+  background: white;
+}
+
+.item img {
+  height: 100px;
+  width: 100px;
+}
+
+.item > div:first-of-type {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.item-name {
+  color: brown;
+  font-weight: 400;
+}
+
+.price-tag {
+  line-height: 20px;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+#map-container {
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#map {
+  border: 2px solid #333;
+  width: 60vw;
+  height: 70vh;
+}

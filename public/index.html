@@ -1,0 +1,199 @@
+<!--
+  Names: Yanjie Niu, Christopher Ku
+  Date: Dec. 11th, 2021
+  Section: CSE 154 AA, SAITAWDEKAR,SONIA
+  File Description: This is the index.html page about the hotel reservation
+  website.
+  It includes the top navigation bar, login and sign up UIs, the main view page
+  with the list of hotels, the page of a hotel's detailed information,
+  reservation UI, the UI with google map inserted to show things to do around
+  the hotel, and the UI to check previous reservations.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Homesurf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header class="top-header">
+      <nav class="top-nav">
+        <p id="home-nav" class="hidden">Home</p>
+        <a href="#about" id="about-nav">About Us</a>
+        <a href="#contact" id="contact-nav">Contact</a>
+        <p id="view-past-reservations" class="hidden"> Previous reservations</p>
+      </nav>
+      <p id="welcome"></p>
+      <button id="login-corner-btn" class="hidden">Sign In</button>
+      <button id="logout-corner-btn" class="hidden">Sign out</button>
+    </header>
+    <div class="container">
+      <header>
+        <p id="brand">Homesurf</p>
+      </header>
+      <main class="main-section">
+        <!-- user sign in and registration view -->
+        <section id="user" class="hidden">
+          <form id="login-form" class="hidden">
+            <label for="username">Username:</label>
+            <input id="username" name="username" type="text" required>
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" required>
+            <div id="submit-btns">
+              <button id="register-form-btn" type="button">New User? Register
+              </button>
+              <button id="login-btn" type="submit">Login</button>
+            </div>
+            <p id="login-error"></p>
+            <p id="login-success" class="hidden"> Logging you in... </p>
+          </form>
+          <form id="register-form" class="hidden">
+            <p>First and Last name must be between 50 characters long</p>
+            <p>Username must contain between 5 - 8 alphanumeric characters</p>
+            <p>
+              Passwords must contain 1 digit, 1 lowercase letter, 1 uppercase letter
+              and must be at least 8 characters long
+            </p>
+            <br>
+            <br>
+            <label for="username">Username: *</label>
+            <input id="register-username" name="username" type="text" required>
+            <label for="password">Password (8 characters minimum):*</label>
+            <input id="register-password" name="password" type="password"
+            minlength="8" required>
+            <label for="confirm-password">Confirm password:*</label>
+            <input id="confirm-password" name="password-confirm" type="password"
+            minlength="8" required>
+            <label for="register-first-name">First Name:*</label>
+            <input id="register-first-name" name="first-name" type="text"
+            required>
+            <label for="register-last-name">Last Name:*</label>
+            <input id="register-last-name" name="last-name" type="text"
+            required>
+            <label for="email">Email: *</label>
+            <input id="email" name="email" type="email" required>
+            <button id="register-btn" type="submit">Register</button>
+            <p id="register-result"></p>
+          </form>
+        </section>
+
+        <!--home view-->
+        <section id="home" class="hidden">
+          <div id="search-container">
+            <form id="search-form" >
+              <div class="form-group">
+                <p>Example: Search for "Seattle" or "New York" in GOING TO.</p>
+                <label for="location" class="form-label">Going to</label>
+                <input class="form-control" name="location" type="text"
+                id="location" placeholder="Search for City or Zip Code"
+                required>
+              </div>
+              <div class="form-group">
+                <label for="checkin" class="form-label">Check In</label>
+                <input id="checkin" name="checkin" class="form-control"
+                type="date" required>
+              </div>
+              <div class="form-group">
+                <label for="checkout" class="form-label">Check Out</label>
+                <input id="checkout" class="form-control" name="checkout"
+                type="date" required>
+              </div>
+              <div class="form-group">
+                <button id="submit-btn">Search</button>
+              </div>
+            </form>
+
+            <section id="search-filter">
+              <div id="view-section">
+                <p id="view-title">Different Views</p>
+                <div>
+                  <button id="list-btn">List</button>
+                  <button id="grid-btn">Grid</button>
+                </div>
+              </div>
+              <div id="filter-section">
+                <p id="filter-title">Filters</p>
+                <div id="filter-items">
+                  <div>
+                    <label for="people">Room Size</label>
+                    <select name="people" id="people" required>
+                      <option value="" selected>-- choose one --</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="sort" id="sort-label">Sort by Price</label>
+                    <select name="sort" id="sort" required>
+                      <option value="" selected>-- choose one --</option>
+                      <option value="DESC">From highest to lowest</option>
+                      <option value="ASC">From lowest to highest</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div id="whole-item-view">
+            <ul id="item-list">
+              <!-- Image sources: google.com -->
+            </ul>
+          </div>
+        </section>
+
+        <!--One hotel detail page-->
+        <section id="hotel-detail-page" class="hidden">
+          <ul id="hotel-detail-page-list">
+            <!-- Image sources: google.com -->
+          </ul>
+          <div id="map-container">
+            <h1 id="view-title-map"> Look around for things to do on the map! </h1>
+            <div id="map"></div>
+          </div>
+        </section>
+        <p id="reservation-success" class="hidden"></p>
+        <p id="success-message" class="hidden">Returning you to main page now...
+        </p>
+
+        <!-- past reservations view -->
+        <section id="past-reservations" class="hidden">
+          <div id="whole-reserved-item-view">
+            <h1 id="view-title-prev"> Previous Reservations </h1>
+            <ul id="items-list">
+              <!-- Image sources: google.com -->
+            </ul>
+          </div>
+        </section>
+
+        <!-- error view -->
+        <p id="error" class="hidden">Oops! Please try to search again later!</p>
+
+      </main>
+    </div>
+
+    <footer>
+      <p class="title" id="about">Our Vision</p>
+      <p>"Power your travel!"</p>
+      <ul id="contact">
+        <li>
+          <p class="title">Where We Are</p>
+          <p>Seattle, WA</p>
+        </li>
+        <li>
+          <p class="title">Email</p>
+          <p>homesurf@homesurf.com</p>
+        </li>
+        <li>
+          <p class="title">Phone</p>
+          <p>+1 888 888 8888</p>
+        </li>
+      </ul>
+    </footer>
+
+  </body>
+</html>
